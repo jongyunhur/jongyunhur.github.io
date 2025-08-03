@@ -2,8 +2,8 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Jong-Yun Hur # the website title (if blank, full name will be used instead)
-first_name: Jong-Yun
+title: JongYun Hur # the website title (if blank, full name will be used instead)
+first_name: JongYun
 middle_name:
 last_name: Hur
 contact_note: >
@@ -83,7 +83,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Jong-Yun Hur Blog # blog_name will be displayed in your blog page
+blog_name: Blog # blog_name will be displayed in your blog page
 blog_description: My technical writings and career posts
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
