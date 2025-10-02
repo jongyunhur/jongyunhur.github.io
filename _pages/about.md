@@ -28,7 +28,7 @@ latest_posts:
 ***
 
 Hello
-I am an undergraduate student currently studying AI Convergence at Soongsil University. My primary area of interest lies in computer architecture and hardware-software co-design. I am passionate about understanding how hardware and software interact to design next-generation computer architectures and hardware accelerators.
+I am an undergraduate student currently studying AI Convergence at Soongsil University. My primary research interest lies at computer architecture and hardware-software co-design. I am passionate about understanding how hardware and software interact to design next-generation computer architectures and hardware accelerators.
 
 I also maintain a technology blog where I share posts in both Korean and English, aiming to expand and share knowledge through various projects and research.
 
