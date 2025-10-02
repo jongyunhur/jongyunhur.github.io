@@ -2,7 +2,7 @@
 layout: page
 title: project 2
 description: Scheduled to be uploaded
-img: 
+img: assets\img\12.jpg
 importance: 2
 category: Work
 giscus_comments: true
