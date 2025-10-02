@@ -194,19 +194,17 @@ keep_files:
 
 # Plug-ins
 plugins:
-  - jekyll-archives-v2
-  - jekyll-email-protect
   - jekyll-feed
-  - jekyll-get-json
-  - jekyll-imagemagick
-  - jekyll-jupyter-notebook
-  - jekyll-link-attributes
-  - jekyll-minifier
-  - jekyll-paginate-v2
-  - jekyll-regex-replace
-  - jekyll/scholar
   - jekyll-sitemap
-  - jekyll-tabs
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
   - jekyll-terser
   - jekyll-toc
   - jekyll-twitter-plugin
@@ -254,44 +252,44 @@ jekyll-archives:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["Hardware-Design", "AI-Accelerator", "Computer-Architecture"] # these tags will be displayed on the front page of your blog
-display_categories: ["Research", "Projects", "Experience", "Thoughts"] # these categories will be displayed on the front page of your blog
+display_categories: ["Research", "Projects", "Experience", "Thoughts", "Work"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
-scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
-
-  style: apa
-  locale: en
-
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-  # Note: if you have latex math in your bibtex, the latex filter
-  # preprocessing may conflict with MathJAX if the latter is enabled.
-  # See https://github.com/alshedivat/al-folio/issues/357.
-  bibtex_filters: [latex, smallcaps, superscript]
-
-  replace_strings: true
-  join_strings: true
-
-  details_dir: bibliography
-  details_link: Details
-
-  query: "@*"
-  group_by: year
-  group_order: descending
+# scholar:  # Disabled for GitHub Pages compatibility
+#   last_name: [Einstein]
+#   first_name: [Albert, A.]
+#
+#   style: apa
+#   locale: en
+#
+#   source: /_bibliography/
+#   bibliography: papers.bib
+#   bibliography_template: bib
+#   # Note: if you have latex math in your bibtex, the latex filter
+#   # preprocessing may conflict with MathJAX if the latter is enabled.
+#   # See https://github.com/alshedivat/al-folio/issues/357.
+#   bibtex_filters: [latex, smallcaps, superscript]
+#
+#   replace_strings: true
+#   join_strings: true
+#
+#   details_dir: bibliography
+#   details_link: Details
+#
+#   query: "@*"
+#   group_by: year
+#   group_order: descending
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
 enable_publication_badges:
   altmetric: true # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
   dimensions: true # Dimensions badge (Customization options: https://badge.dimensions.ai/)
-  google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
-  inspirehep: true # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
+  google_scholar: false # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html) - disabled for GitHub Pages
+  inspirehep: false # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/) - disabled for GitHub Pages
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
