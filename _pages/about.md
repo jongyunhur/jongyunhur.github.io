@@ -9,7 +9,8 @@ profile:
   image: prof_mypic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>More information about me can be found in my CV.</p>
+
+
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 

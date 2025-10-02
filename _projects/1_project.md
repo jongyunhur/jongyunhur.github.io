@@ -2,7 +2,7 @@
 layout: page
 title: project 1
 description: Scheduled to be uploaded
-img: assets\img\12.jpg
+img: assets/img/12.jpg
 importance: 1
 category: Work
 related_publications: true
