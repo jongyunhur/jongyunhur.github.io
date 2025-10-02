@@ -3,8 +3,6 @@ layout: post
 title: Starting My Research Journey
 date: 2025-10-01 22:15:35
 description: Why I'm starting this blog and what I hope to explore in computer architecture
-tags: introduction research academic-blog
-categories: personal
 ---
 
 # Starting My Research Blog
