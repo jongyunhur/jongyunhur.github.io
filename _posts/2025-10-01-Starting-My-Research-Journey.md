@@ -25,7 +25,6 @@ Broadly speaking, my research interests lie in **computer architecture and hardw
 
 To be honest, I haven't settled on a specific research area yet. I haven't done deep research in any one direction, but I'm actively exploring different subfields within this broader space. Recently, I've been learning about next-generation architectures and GPUs, trying to figure out which area truly captures my interest.
 
-
 ## What You Can Expect
 
 In this blog, I plan to share:
