@@ -30,6 +30,6 @@ latest_posts:
 Hello
 I am an undergraduate student currently studying AI Convergence at Soongsil University. My primary research interest lies at computer architecture and hardware-software co-design. I am passionate about understanding how hardware and software interact to design next-generation computer architectures and hardware accelerators.
 
-I maintain technology blogs in English (on this site) and Korean ([Tistory](https://risolvere.tistory.com/)), sharing insights on projects and research across different communities.
+I maintain technology blogs in English (on this site) and Korean ([Tistory](https://risolvere.tistory.com/)), sharing insights on projects and research.
 
 For my full Curriculum Vitae, please refer to the [CV page](https://jongyunhur.github.io/cv/).
