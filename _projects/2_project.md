@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 2
+title: None
 description: Scheduled to be uploaded
 img: assets/img/12.jpg
 importance: 2
