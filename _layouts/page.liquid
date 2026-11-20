@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="prose">
+  <header class="page-heading">
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}
+      <p>{{ page.description | escape }}</p>
+    {% endif %}
+    {% if page.period %}
+      <p class="entry-date">{{ page.period | escape }}</p>
+    {% endif %}
+  </header>
+  {{ content }}
+  {% if page.related_publications %}
+    <h2>References</h2>
+    {% bibliography --cited_in_order %}
+  {% endif %}
+</article>

@@ -1,0 +1,55 @@
+email: jongyun.jh@gmail.com
+university_email: hurjy1217@soongsil.ac.kr
+github: https://github.com/jongyunhur
+linkedin: https://kr.linkedin.com/in/jongyun-hur-71a9a0378
+location: Seoul, South Korea
+cv_pdf: /assets/pdf/cv.pdf
+
+education:
+  - title: Soongsil University
+    subtitle: B.S. in Artificial Intelligence Software
+    dates: Mar 2022 – Feb 2028 (expected)
+
+publications:
+  - title: Evaluating Latent-Space Mixture-of-Experts in Small Vision-Language Models
+    authors:
+      - Jongyun Hur
+      - Seongheum Kim
+    venue: Annual Conference of Korea Information Processing Society (ACK), 2026
+    description: Compared the compute and accuracy of standard and latent-space expert designs in DeepSeek-VL2-Tiny under the same partial retraining setup.
+    program_url: https://ack.kips.or.kr/programBook
+
+experience:
+  - title: UNIST CoCoLab
+    subtitle: Undergraduate Research Intern · Advisor Ranggi Hwang
+    dates: Jan 2026 – Feb 2026
+    details:
+      - Developed a cycle-level C++ simulator for an SCNN accelerator to model its sparse convolution dataflow.
+      - Analyzed bottlenecks using multiplier utilization, processing element idle cycles, accumulator bank conflicts, and queue stalls.
+  - title: Potatonet
+    subtitle: Machine Learning Engineer Intern
+    dates: Aug 2025 – Nov 2025
+    details:
+      - Reworked frame selection for electric vehicle fire detection using smoke and flame detection, capture time, and detection confidence.
+      - Implemented bounded buffering and selective preprocessing to reduce stale frames and redundant Qwen2.5-VL-3B inference on Jetson Orin Nano.
+
+awards:
+  - title: President’s Award (1st Place)
+    subtitle: Soongsil University AI Software Competition
+    dates: Jul 2026
+  - title: 3rd Place
+    subtitle: 2026 Pre-Startup Team & Startup Club Discovery Hackathon
+    dates: May 2026
+  - title: 2nd Place
+    subtitle: Soongsil University AI Convergence Competition
+    dates: Nov 2023
+
+skills:
+  - label: Programming
+    value: C++, C, Python, SQL, Verilog
+  - label: Machine learning
+    value: scikit-learn, PyTorch, Keras, TensorFlow
+  - label: Languages
+    value: Korean (native), English (intermediate)
+  - label: Certifications
+    value: Information Processing Industrial Engineer, TOPCIT Level 3, ADSP, SQLD

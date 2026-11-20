@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% unless page.url == '/' %}{{ page.title | escape }} | {% endunless %}{{ site.title | escape }}</title>
+    {% assign summary = page.description | default: site.description %}
+    <meta name="description" content="{{ summary | strip | escape }}">
+    {% assign page_path = page.url | remove: 'index.html' %}
+    <link rel="canonical" href="{{ page_path | absolute_url }}">
+    <link rel="icon" href="{{ '/assets/img/jh-mark.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}">
+  </head>
+  <body>
+    {% assign profile = site.data.profile %}
+    {% assign navigation = site.pages | where: 'nav', true | sort: 'nav_order' %}
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="site-width header-inner">
+        <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+        <nav class="site-nav" aria-label="Main">
+          {% for link in navigation %}
+            {% assign link_path = link.url | remove: 'index.html' %}
+            {% assign section = link_path | downcase %}
+            {% assign prefix = page_path | slice: 0, section.size | downcase %}
+            <a href="{{ link_path | relative_url }}"{% if page_path == link_path %} aria-current="page"{% elsif section != '/' and prefix == section %} aria-current="location"{% endif %}>{{ link.title | escape }}</a>
+            {% if link_path == '/' %}
+              <a href="{{ '/' | relative_url }}#publications">Publications</a>
+              <a href="{{ '/' | relative_url }}#awards">Awards</a>
+            {% endif %}
+          {% endfor %}
+          <a href="{{ profile.cv_pdf | relative_url }}">CV</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" class="site-width">
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      <div class="site-width footer-inner">
+        <span>© {{ 'now' | date: '%Y' }} {{ site.title | escape }}</span>
+        <div class="footer-links">
+          <a href="mailto:{{ profile.email }}">Email</a>
+          <a href="{{ profile.github }}">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

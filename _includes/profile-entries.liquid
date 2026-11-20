@@ -1,0 +1,20 @@
+<ul class="entry-list">
+  {% for entry in include.entries %}
+    <li class="entry">
+      <div class="entry-header">
+        <h3 class="entry-title">{{ entry.title | escape }}</h3>
+        {% if entry.dates %}
+          <span class="entry-date">{{ entry.dates | escape }}</span>
+        {% endif %}
+      </div>
+      <p class="entry-subtitle">{{ entry.subtitle | escape }}</p>
+      {% if entry.details %}
+        <ul class="entry-details">
+          {% for detail in entry.details %}
+            <li>{{ detail | escape }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
