@@ -9,6 +9,15 @@
     {% assign page_path = page.url | remove: 'index.html' %}
     <link rel="canonical" href="{{ page_path | absolute_url }}">
     <link rel="icon" href="{{ '/assets/img/jh-mark.svg' | relative_url }}" type="image/svg+xml">
+    <meta name="color-scheme" content="light dark">
+    <script>
+      (function () {
+        var stored = null;
+        try { stored = localStorage.getItem('theme'); } catch (e) {}
+        var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      })();
+    </script>
     <link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}">
   </head>
   <body>
@@ -18,6 +27,7 @@
     <header class="site-header">
       <div class="site-width header-inner">
         <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+        <div class="header-actions">
         <nav class="site-nav" aria-label="Main">
           {% for link in navigation %}
             {% assign link_path = link.url | remove: 'index.html' %}
@@ -31,6 +41,11 @@
           {% endfor %}
           <a href="{{ profile.cv_pdf | relative_url }}">CV</a>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        </div>
       </div>
     </header>
     <main id="main-content" class="site-width">
@@ -45,5 +60,25 @@
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var button = document.querySelector('.theme-toggle');
+        var media = window.matchMedia('(prefers-color-scheme: dark)');
+        function sync() { button.setAttribute('aria-pressed', root.getAttribute('data-theme') === 'dark'); }
+        sync();
+        button.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          sync();
+        });
+        media.addEventListener('change', function (e) {
+          var stored = null;
+          try { stored = localStorage.getItem('theme'); } catch (err) {}
+          if (!stored) { root.setAttribute('data-theme', e.matches ? 'dark' : 'light'); sync(); }
+        });
+      })();
+    </script>
   </body>
 </html>
